@@ -1,0 +1,15 @@
+{
+  "name": "retail-deal-mobile-electronics",
+  "version": "1.0.0",
+  "description": "RETAIL DEAL MOBILE ELECTRONICS - Standard MERN Architecture",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "npm --prefix backend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

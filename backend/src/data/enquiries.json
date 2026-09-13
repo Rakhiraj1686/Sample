@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ENQ-784200",
+    "name": "Vikram Singh",
+    "phone": "9826199999",
+    "product": "Samsung Galaxy S24 Ultra",
+    "message": "Inquiring about 256GB Black availability",
+    "createdAt": "2026-09-13T06:26:24.200Z",
+    "status": "Pending Verification"
+  },
+  {
+    "id": "ENQ-310168",
+    "name": "Aakash Verma",
+    "phone": "9826012345",
+    "product": "Smartphones",
+    "message": "Looking for 5G phone under 25k",
+    "createdAt": "2026-09-12T19:45:10.168Z",
+    "status": "Pending Verification"
+  },
+  {
+    "id": "ENQ-959418",
+    "name": "Vikram Singh",
+    "phone": "+91 9826199887",
+    "product": "Wireless Earbuds",
+    "message": "Interested in low-latency TWS earbuds at Bicholi Mardana shop.",
+    "createdAt": "2026-09-12T19:22:39.418Z",
+    "status": "Pending Verification"
+  }
+]
