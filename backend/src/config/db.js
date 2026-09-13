@@ -1,10 +1,14 @@
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const DATA_DIR = path.join(__dirname, '..', 'data');
+
+// Serverless friendly directory for Vercel/AWS Lambda
+const isVercel = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+const DATA_DIR = isVercel ? os.tmpdir() : path.join(__dirname, '..', 'data');
 const ENQUIRIES_FILE = path.join(DATA_DIR, 'enquiries.json');
 
 export const connectDB = async () => {
@@ -15,9 +19,9 @@ export const connectDB = async () => {
     if (!fs.existsSync(ENQUIRIES_FILE)) {
       fs.writeFileSync(ENQUIRIES_FILE, JSON.stringify([], null, 2));
     }
-    console.log('📦 Database / Local Storage Connected successfully.');
+    console.log(`📦 Database / Storage connected at: ${ENQUIRIES_FILE}`);
   } catch (error) {
-    console.error('Database connection error:', error);
+    console.warn('Storage init fallback (using in-memory):', error.message);
   }
 };
 

@@ -1,13 +1,20 @@
 {
   "name": "retail-deal-mobile-electronics",
   "version": "1.0.0",
-  "description": "RETAIL DEAL MOBILE ELECTRONICS - Standard MERN Architecture",
+  "private": true,
+  "type": "module",
+  "description": "RETAIL DEAL MOBILE ELECTRONICS - Full Stack MERN Architecture on Vercel",
   "scripts": {
     "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
     "frontend": "npm --prefix frontend run dev",
     "backend": "npm --prefix backend run dev",
     "build": "npm --prefix frontend run build",
     "start": "npm --prefix backend run start"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
